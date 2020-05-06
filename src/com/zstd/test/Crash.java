@@ -20,8 +20,8 @@ public class Crash {
 
 	public static void main(String args[]) throws InterruptedException {
 
-		AtomicInteger atomicInteger = new AtomicInteger(0);
-		AtomicInteger successfulCompletedTask = new AtomicInteger(0);
+		final AtomicInteger atomicInteger = new AtomicInteger(0);
+		final AtomicInteger successfulCompletedTask = new AtomicInteger(0);
 
 		for (int k = 0; k < maxTasks; k++) {
 			Future<?> submit = zstdPool.submit(new Runnable() {
